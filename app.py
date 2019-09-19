@@ -18,7 +18,7 @@ def showMain():
        return redirect('/videos')
 
 @app.route('/videos')
-def showMain(count):
+def showVideos(count):
        """ Muestra pagina principal"""
        return render_template(
               'videos.html')
