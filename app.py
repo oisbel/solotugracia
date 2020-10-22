@@ -40,18 +40,13 @@ def showMain():
 	files2 = []
 	files3 = []
 	filesTuples = []
-	for i in xrange(0,len(selectedFiles)):
+	for i in range(0,len(selectedFiles)):
 		file = selectedFiles[i]
 		filesTuples.append((file[:-4].replace('_', ' '),file))
 	files1 = filesTuples[0:5]
 	files2 = filesTuples[5:10]
 	files3 = filesTuples[-5:]
 	return render_template('index.html', files1 = files1, files2 = files2, files3 = files3)
-
-@app.route('/videos')
-def showVideos():
-	""" Muestra pagina principal de videos"""
-	return render_template('videos.html')
 
 @app.route('/spurgeon')
 def showSpurgeon():
@@ -65,7 +60,7 @@ def showSpurgeon():
 	files = os.listdir(path)
 	files1 = []
 	files2 = []
-	for i in xrange(0,len(files)):
+	for i in range(0,len(files)):
 		file = files[i]
 		if i % 2:
 			files1.append((file[:-4].replace('_', ' '),file))
