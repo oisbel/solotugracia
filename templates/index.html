@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Solo Tu Gracia</title>
+        <link rel="icon" type="image/x-icon" href="/static/assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="/static/css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">Inicio</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#credo">Credo</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#mensajes">Mensajes</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#estudios">Estudios Bíblicos</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#videos">Videos</a></li>                       
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container d-flex h-100 align-items-center">
+                <div class="mx-auto text-center">
+                    <h1 class="mx-auto my-0 text-uppercase">Solo Tu Gracia</h1>
+                    <h2 class="text-white-50 mx-auto mb-5">La justicia es por medio de la fe</h2> 
+                    <h5 class="text-white-50 mx-auto mb-5">Romanos 3:23-25: 
+                     por cuanto todos pecaron, y están destituidos de la gloria de Dios,
+                     siendo justificados gratuitamente por su gracia, mediante la redención que es en Cristo Jesús,
+                     a quien Dios puso como propiciación por medio de la fe en su sangre, para manifestar su justicia, a causa de haber pasado por alto, en su paciencia, los pecados pasados,</h5>                   
+                     <!-- <a class="btn btn-primary js-scroll-trigger" href="#about">Contáctenos</a> -->
+                </div>
+            </div>
+        </header>
+        <!-- About-->
+        <section class="about-section text-center" id="credo">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h2 class="text-white mb-4">Somos cristianos reformados, defensores de la doctrina de la Soberanía de Dios y todo lo que de ella se deriva.</h2>
+                        <h3 class="text-white mb-4">
+                            <a href="/static/docs/Confesion-Bautista-1689.pdf"  target="_blank">Confesión de Fe</a>
+                        </h3>
+                        <p class="text-white-50">
+                            Afirmamos las 5 Solas de la Reforma: Solus Christus, Sola Scriptura, Sola Fide, Sola Gratia, Soli Deo Gloria.
+                            Y enfatizamos los 5 puntos del Calvinismo (TULIP):
+                            Depravación total.Elección incondicional.Expiación limitada.Gracia irresistible.Perseverancia de los santos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>        
+        <!-- Estudios Bíblicos-->
+        <section class="signup-section" id="mensajes">
+            <div class="container">                
+                <div class="mx-auto text-center">
+                    <a href="{{url_for('showSpurgeon')}}"><i class="fas fa-book fa-2x mb-2 text-white"></i></a>
+                    <h2 class="text-white mb-5">Mensajes de Charles Spurgeon</h2>
+                </div> 
+                <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                    <div class="col-lg-4">
+                         <div class="bg-white text-center project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left"> 
+                                    {% for file in files1 %}
+                                    <div class="post-preview">                              
+                                      <a href="/static/docs/spurgeon/{{file[1]}}" target="_blank">                              
+                                        <h5 class="post-subtitle">
+                                            <i class="fas fa-bible fa-xs"></i>
+                                          {{file[0]}}
+                                        </h5>
+                                      </a>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                         <div class="bg-white text-center project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left"> 
+                                    {% for file in files2 %}
+                                    <div class="post-preview">                              
+                                      <a href="/static/docs/spurgeon/{{file[1]}}" target="_blank">                              
+                                        <h5 class="post-subtitle">
+                                            <i class="fas fa-bible fa-xs"></i>
+                                          {{file[0]}}
+                                        </h5>
+                                      </a>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                         <div class="bg-white text-center project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left"> 
+                                    {% for file in files3 %}
+                                    <div class="post-preview">                              
+                                      <a href="/static/docs/spurgeon/{{file[1]}}" target="_blank">                              
+                                        <h5 class="post-subtitle">
+                                            <i class="fas fa-bible fa-xs"></i>
+                                          {{file[0]}}
+                                        </h5>
+                                      </a>                                      
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>            
+                <a class="btn btn-primary js-scroll-trigger" href="{{url_for('showSpurgeon')}}">Más Mensajes</a>
+            </div>
+        </section> 
+        <!-- Videos-->
+        <section class="projects-section bg-light" id="videos">
+            <div class="container">
+                <!-- Featured Project Row-->
+                <div class="row align-items-center no-gutters mb-4 mb-lg-5">                    
+                    <!-- Una foto en ves del video
+                    <a href="https://www.youtube.com/watch?v=xr5JiifZygU"  target="_blank">
+                        <img class="img-fluid mb-3 mb-lg-0" src="/static/assets/img/predestinacion.png" alt="" />
+                    </a>
+                    -->
+                    <iframe  class="col-xl-8 col-lg-7" frameborder="0" scrolling="no" height="350"
+                        src="https://www.youtube.com/embed/xr5JiifZygU?autoplay=1&mute=1">
+                    </iframe>                    
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>La Predestinación, ¿Es Bíblica?</h4>
+                            <p class="text-black-50 mb-0">La mayoría de las iglesias no creen en la predestinación. Mas bien se aferran al hecho de que el hombre es el que elige a Dios, y decide por si mismo apartarse del mal camino y escoger la vida.Pero la verdad que enseña la biblia es que la iniciativa no la toma el hombre, porque no quiere ni puede, sino que Dios a los que el escogió para salvación los regenera, los llama, y los convence para que crean el evangelio, les da la fe sin que ellos la pidan ni la esperen.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Two Row-->
+                <div class="row justify-content-center no-gutters">                    
+                    <!--
+                    <a href="https://www.youtube.com/watch?v=BFGEN8I0yTg"  target="_blank">
+                        <img class="img-fluid" src="/static/assets/img/tirano.png" alt="" />
+                    </a>
+                    -->
+                    <iframe class="col-lg-6" frameborder="0" scrolling="no" 
+                        src="https://www.youtube.com/embed/BFGEN8I0yTg?autoplay=0&mute=1">
+                    </iframe>                    
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 class="text-white">¿Dios un tirano?</h4>
+                                    <p class="mb-0 text-white-50">El hecho de que Dios en su soberanía predestina a los que van a ser salvos es mal visto por los que todavía no han entendido el carácter de Dios ni la naturaleza humana. Convierten algo positivo en negativo.  Dios no es injusto por eso, si se habla de Justicia en lo que se debería pensar es en por qué no manda a todo ser humano para el infierno, dado que todos lo merecen y Él no está obligado a salvar a nadie.</p>
+                                    <hr class="d-none d-lg-block mb-0 mr-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project One Row-->
+                <div class="row justify-content-center no-gutters mb-5 mb-lg-0">                    
+                    <iframe class="col-lg-6" frameborder="0" scrolling="no" 
+                        src="https://www.youtube.com/embed/FiIQQ3ClkRM?autoplay=0&mute=1">
+                    </iframe>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-white">Ananías y Safira ¿Fueron al cielo?</h4>
+                                    <p class="mb-0 text-white-50">Los que piensan que la salvación se gana y se pierde, inmediatamente van a apuntar su dedo a Ananías y Safira y los van a mandar al infierno. Usted dirá: "No se pudieron salvar, porque pecaron terriblemente y Dios no les dio tiempo de arrepentirse".¿Acaso se arrepiente usted de cada uno de sus pecados? ¿No ha cometido pecados más terribles que el de Ananías y Safira?</p>
+                                    <hr class="d-none d-lg-block mb-0 ml-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Two Row-->
+                <div class="row justify-content-center no-gutters">                    
+                    <!--
+                    <a href="https://www.youtube.com/watch?v=BFGEN8I0yTg"  target="_blank">
+                        <img class="img-fluid" src="/static/assets/img/tirano.png" alt="" />
+                    </a>
+                    -->
+                    <iframe class="col-lg-6" frameborder="0" scrolling="no" 
+                        src="https://www.youtube.com/embed/Q9x95tiV8E4?autoplay=0&mute=1">
+                    </iframe>                    
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 class="text-white">¿De verdad Jesús compró nuestra salvación?</h4>
+                                    <p class="mb-0 text-white-50">Creemos que la biblia es literal cuando dice que Cristo pagó por nuestros pecados. El significado no es otro que el que nos cuenta el Nuevo Testamento: Teníamos una deuda con Dios, y Cristo la pagó sin nosotros merecerlo. La muerte de Cristo no fue un pago inicial (downpayment) a Dios, ni tampoco es una linea que crédito que se nos fue otorgada y tenemos que pagar mensualmente con "buenas obras". La salvación está comprada completamente con la sangre de Cristo, no es algo que nosotros compramos, ni nos ganamos, es un regalo inmerecido.</p>
+                                    <hr class="d-none d-lg-block mb-0 mr-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project One Row-->
+                <div class="row justify-content-center no-gutters mb-5 mb-lg-0">                    
+                    <iframe class="col-lg-6" frameborder="0" scrolling="no" 
+                        src="https://www.youtube.com/embed/6RFmM1Zj-h8?autoplay=0&mute=1">
+                    </iframe>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-white">Dilema Divino</h4>
+                                    <p class="mb-0 text-white-50">¿Por qué Dios no salva al hombre sin mandar a Cristo a morir en una cruz públicamente?
+                                        El por qué Cristo tuvo que morir la encontramos en el siguiente versículo:
+                                        Romanos 3:25
+                                        A quien Dios puso como propiciación por medio de la fe en su sangre, para manifestar su justicia, a causa de haber pasado por alto, en su paciencia, los pecados pasados.
+                                        Cristo murió como propiciación.
+                                        Luego de que Dios perdonara al hombre estas interrogantes empezaron a recorrer el cielo: ¿Será que Dios es verdaderamente Justo?
+                                        ¿Como un Dios justo y santo no aplica justicia sobre los hombres que pecaron?</p>
+                                    <hr class="d-none d-lg-block mb-0 ml-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>               
+
+                <div class="container align-items-center">
+                    <div class="mx-auto text-center">
+                        <h2 class="text-white-50 mx-auto">...</h2>
+                        <a class="btn btn-primary js-scroll-trigger" href="https://www.youtube.com/channel/UCEdD3cf4EjqgNq65Kk2kKng/videos" target="_blank">Mas videos</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Estudios Biblicos-->
+        <section class="text-center" id="estudios">
+            <div class="container">
+                <div class="mx-auto text-center">
+                    <i class="fas fa-book fa-2x mb-2 text-white"></i>
+                    <h2 class="text-black mb-5">Estudios Bíblicos</h2>
+                </div>
+                 <div class="row">
+                  <div class="col-lg-12">
+                    <div class="intro-text">
+                      <span class="name">...pronto</span>
+                      <hr class="star-light">
+                      <span class="skills">Contenido Pendiente</span>
+                    </div>
+                    <p class="text-black-50">
+                            Contenido Pendiente
+                    </p>
+                    <div class="secondary">
+                        <h4>Romanos 8:29-34</h4>
+                        <p>29 Porque a los que antes conoció, también los predestinó para que fuesen hechos conformes a la imagen de su Hijo, para que él sea el primogénito entre muchos hermanos.</p>
+                        <p>30 Y a los que predestinó, a éstos también llamó; y a los que llamó, a éstos también justificó; y a los que justificó, a éstos también glorificó.</p>
+                        31 ¿Qué, pues, diremos a esto? Si Dios es por nosotros, ¿quién contra nosotros?
+                        32 El que no escatimó ni a su propio Hijo, sino que lo entregó por todos nosotros, ¿cómo no nos dará también con él todas las cosas?
+                        33 ¿Quién acusará a los escogidos de Dios? Dios es el que justifica.
+                        34 ¿Quién es el que condenará? Cristo es el que murió; más aun, el que también resucitó, el que además está a la diestra de Dios, el que también intercede por nosotros.
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact-->   
+        <section class="contact-section bg-black">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Dirección</h4>
+                                <hr class="my-4" />
+                                <div class="small text-black-50">* *** ***** ******* TX</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-envelope text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Correo electrónico</h4>
+                                <hr class="my-4" />
+                                <div class="small text-black-50">
+                                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=apologistadelagracia@gmail.com" target="_blank">apologistadelagracia@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Teléfono</h4>
+                                <hr class="my-4" />
+                                <div class="small text-black-50">***-***-****</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="social d-flex justify-content-center">
+                    <a class="mx-2" href="https://www.youtube.com/channel/UCEdD3cf4EjqgNq65Kk2kKng" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                    <a class="mx-2" href="#!"><i class="fab fa-amazon"></i></a>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        {% include "footer.html" %}
+        <!-- End of Footer -->
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="/static/js/scripts.js"></script>
+    </body>
+</html>

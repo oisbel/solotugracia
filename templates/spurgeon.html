@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Mensajes-Spurgeon</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Portfolio projects">
+	<meta name="keywords" content="solo tu gracia, calvinismo, arminianismo, TULIP, predestinacion, salvación">
+	<link rel="icon" type="image/x-icon" href="/static/assets/img/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="/static/css/styles.css" rel="stylesheet" />
+</head>
+<body>
+	<!-- Navegations -->
+    {% include "navigation-mensajes.html" %}
+    <!-- End of Navegations -->
+       <section id="top">
+       	<img height="100" />
+       </section>       
+	 <!-- Main Content -->
+    <div class="container"> 
+    	<div class="mx-auto text-center">
+            <i class="fas fa-book fa-2x mb-2 text-white"></i>
+            <div class="post-preview">					          
+	          <h2 class="post-title">
+	              Charles Spurgeon
+	          </h2>
+	          <p class="post-meta">
+	          	Mensajes en el púlpito de la capilla new park street y en el púlpito del tabernáculo metropolitano.
+	          </p>
+	          <img class="img-fluid" src="/static/assets/img/spurgeon.png" width="100" height="100" />
+			</div>
+			<hr>
+        </div>               
+        <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+            <div class="col-lg-6">
+                <div class="bg-white text-center project">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-left"> 
+                        	{% for file in files1 %}
+					        <div class="post-preview">					        	
+					          <a href="/static/docs/spurgeon/{{file[1]}}">					          	
+					            <h3 class="post-subtitle">
+					            	<i class="fas fa-bible fa-xs"></i>
+					              {{file[0]}}
+					            </h3>
+					          </a>
+					          <p class="post-meta">...
+					            <a href="/static/docs/spurgeon/{{file[1]}}" download>descargar(pdf)</a>
+					          </p>
+					        </div>
+					        {% endfor %}
+					        <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            <div class="col-lg-6">
+                <div class="bg-white text-center project">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-left"> 
+                        	{% for file in files2 %}
+					        <div class="post-preview">
+					          <a href="/static/docs/spurgeon/{{file[1]}}">
+					            <h3 class="post-subtitle">
+					            	<i class="fas fa-bible fa-xs"></i>
+					              {{file[0]}}
+					            </h3>
+					          </a>
+					          <p class="post-meta">...
+					            <a href="/static/docs/spurgeon/{{file[1]}}" download>descargar(pdf)</a>
+					          </p>
+					        </div>
+					        {% endfor %}
+					        <hr> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+                   
+        </div>           
+        <a class="btn btn-primary js-scroll-trigger" href="#top">Subir</a>
+     </div>
+  </div>
+
+  <hr>
+	<!--/.Projects's container-->
+	<!-- Footer-->
+    {% include "footer.html" %}
+    <!-- End of Footer -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="/static/js/scripts.js"></script>
+</body>
+</html>
